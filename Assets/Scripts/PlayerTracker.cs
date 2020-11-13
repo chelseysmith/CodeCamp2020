@@ -5,12 +5,12 @@ using UnityEngine;
 public class NewBehaviourScript : MonoBehaviour
 {
     public Transform trackedObject;
-    public float maxDistance 10;
+    public float maxDistance = 10;
     public float moveSpeed = 20;
     public float updateSpeed = 10;
 
     [Range(0, 10)]
-    publicfloat currentDistnace = 5;
+    public float currentDistnace = 5;
     private string moveAxis = "Mouse ScrollWheel";
     private GameObject ahead;
     private MeshRenderer _renderer;
