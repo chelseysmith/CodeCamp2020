@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Base path: 'C:/Program Files/Unity/Hub/Editor/2020.1.13f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2020.1.13f1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 Cmd: compileSnippet
@@ -7,3 +8,7 @@ Cmd: compileSnippet
 Quitting shader compiler process
 =======
 >>>>>>> master
+=======
+Base path: 'D:/Program Files/Unity/2020.1.13f1/Editor/Data', plugins path 'D:/Program Files/Unity/2020.1.13f1/Editor/Data/PlaybackEngines'
+Cmd: initializeCompiler
+>>>>>>> 870acb807b505fa1b088cfeb2289495f884da830
