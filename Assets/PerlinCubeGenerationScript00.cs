@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using UnityEditor.AI;
+using UnityEngine.AI;
 
 public class PerlinCubeGenerationScript00 : MonoBehaviour
 {
@@ -6,10 +8,12 @@ public class PerlinCubeGenerationScript00 : MonoBehaviour
     public float Refinement = 0f;
     public float Multiplier = 0f;
     public int Cubes = 0;
+    public NavMeshSurface Surface;
 
     void Start()
     {
         GenerateCubes();
+        Surface.BuildNavMesh();
     }
 
     private void GenerateCubes()
