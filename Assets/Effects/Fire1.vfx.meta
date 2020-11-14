@@ -1,0 +1,17 @@
+<<<<<<< HEAD:Assets/Effects/Fire1.vfx.meta
+fileFormatVersion: 2
+guid: 0d501390f27f3b740af67c279ea0dc39
+VisualEffectImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+=======
+fileFormatVersion: 2
+guid: f0efff9416db4174984390120a80ee87
+VisualEffectImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+>>>>>>> master:Library/PackageCache/com.unity.visualeffectgraph@8.2.0/Editor/Templates/Simple Heads & Trails.vfx.meta

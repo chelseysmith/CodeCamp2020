@@ -1,0 +1,17 @@
+<<<<<<< HEAD:Assets/Prefabs/Fire1.prefab.meta
+fileFormatVersion: 2
+guid: 08f09fc61d5938b4bb7a04a9f8538701
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+=======
+fileFormatVersion: 2
+guid: 1d356e56081caed46bb576bcdf392666
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+>>>>>>> master:Library/PackageCache/com.unity.shadergraph@8.2.0/Editor/Templates/PassMesh.template.meta

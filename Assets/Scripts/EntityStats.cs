@@ -22,10 +22,12 @@ public class EntityStats : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void CatchFire(Enums.Fire fire, Material material)
+    public void CatchFire(Enums.Fire fire, Material material, GameObject fireEffect)
     {
         _renderer = GetComponent<Renderer>();
         _renderer.material = material;
         Fire = fire;
+        var gameObject = GameObject.Instantiate(fireEffect, new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z), Quaternion.identity);
+        gameObject.transform.parent = transform;
     }
 }
