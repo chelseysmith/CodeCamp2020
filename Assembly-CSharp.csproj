@@ -65,14 +65,15 @@
     <Compile Include="Assets\Scripts\PlayerFollow.cs" />
     <Compile Include="Assets\NavMeshComponents\_ditor\NavMeshComponentsGUIUtility.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
-    <Compile Include="Assets\Scripts\EntityStats.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\NavMeshComponents\_cripts\NavMeshModifier.cs" />
     <Compile Include="Assets\Scripts\Constants.cs" />
     <Compile Include="Assets\NavMeshComponents\_cripts\NavMeshModifierVolume.cs" />
     <Compile Include="Assets\Scripts\PerlinMoveScript00.cs" />
     <Compile Include="Assets\Scripts\FireManager.cs" />
+    <Compile Include="Assets\AgentControlScript00.cs" />
     <Compile Include="Assets\Scripts\PlayerTracker.cs" />
+    <Compile Include="Assets\Scripts\EntityStats.cs" />
     <Compile Include="Assets\NavMeshComponents\_cripts\NavMeshLink.cs" />
     <Compile Include="Assets\NavMeshComponents\_ditor\NavMeshSurfaceEditor.cs" />
     <Compile Include="Assets\NavMeshComponents\_ditor\NavMeshModifierEditor.cs" />

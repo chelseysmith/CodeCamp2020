@@ -30,9 +30,9 @@ public class FireManager : MonoBehaviour
             _burnableObjects.Add(obj.GetComponent<EntityStats>());
         }
 
-        _burnableObjects[236].CatchFire(Enums.Fire.level1, fire1, _fire1);
-        _burnableObjects[476].CatchFire(Enums.Fire.level2, fire2, _fire1);
-        _burnableObjects[789].CatchFire(Enums.Fire.level3, fire3, _fire1);
+        _burnableObjects[200].CatchFire(Enums.Fire.level1, fire1, _fire1);
+        _burnableObjects[800].CatchFire(Enums.Fire.level2, fire2, _fire1);
+        _burnableObjects[950].CatchFire(Enums.Fire.level3, fire3, _fire1);
 
         StartCoroutine(FireUpdate());
     }
@@ -49,8 +49,8 @@ public class FireManager : MonoBehaviour
                 if (_burnableObjects[i].Fire != Enums.Fire.na)
                 {
                     _burnableObjects[i].Tick();
-                    
-                    if(_burnableObjects[i].Dead)
+
+                    if (_burnableObjects[i].Dead)
                     {
                         //bjectsDestroyed = true;
                         AttemptSpread(_burnableObjects[i]);
@@ -78,7 +78,7 @@ public class FireManager : MonoBehaviour
                 PerlinNoise = Mathf.PerlinNoise(i * Refinement, j * Refinement);
                 //var gameObject0 = GameObject.CreatePrimitive(PrimitiveType.Cube);
 
-                var gameObject = GameObject.Instantiate(_prefab, new Vector3(i, PerlinNoise * Multiplier, j), Quaternion.identity);
+                var gameObject = Instantiate(_prefab, new Vector3(i, PerlinNoise * Multiplier, j), Quaternion.identity);
                 gameObject.transform.parent = transform;
 
                 //gameObject0.transform.position = new Vector3(i, PerlinNoise * Multiplier, j);
@@ -115,7 +115,7 @@ public class FireManager : MonoBehaviour
 
     Material GetMaterialByType(Enums.Fire fire)
     {
-        switch(fire)
+        switch (fire)
         {
             case Enums.Fire.level1:
                 return fire1;

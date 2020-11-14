@@ -3,7 +3,13 @@ guid: 8c8c135b7ba243443b16df60edc2c2e4
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - fire1: {fileID: 2100000, guid: 146c31419af4d4b438e544a95b7d3869, type: 2}
+  - fire2: {fileID: 2100000, guid: 4248342de97673148b3431920fb5d039, type: 2}
+  - fire3: {fileID: 2100000, guid: 686b22f9d8c6d2244afa48b813e4c112, type: 2}
+  - _prefab: {fileID: 5770537143741138312, guid: c212354cb032f7348a238658485798c4, type: 3}
+  - _fire1: {fileID: 3810930040690761737, guid: 32f7434a711bc4c46a3dcf533bebe26b, type: 3}
+  - Surface: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
