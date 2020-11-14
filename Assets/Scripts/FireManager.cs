@@ -7,6 +7,7 @@ public class FireManager : MonoBehaviour
     [SerializeField] Material fire1;
     [SerializeField] Material fire2;
     [SerializeField] Material fire3;
+    [SerializeField] GameObject _fire1;
 
     List<EntityStats> _burnableObjects = new List<EntityStats>();
 
@@ -18,9 +19,9 @@ public class FireManager : MonoBehaviour
             _burnableObjects.Add(obj.GetComponent<EntityStats>());
         }
 
-        _burnableObjects[25].CatchFire(Enums.Fire.level1, fire1);
-        _burnableObjects[75].CatchFire(Enums.Fire.level2, fire2);
-        _burnableObjects[45].CatchFire(Enums.Fire.level3, fire3);
+        _burnableObjects[25].CatchFire(Enums.Fire.level1, fire1, _fire1);
+        _burnableObjects[75].CatchFire(Enums.Fire.level2, fire2, _fire1);
+        _burnableObjects[45].CatchFire(Enums.Fire.level3, fire3, _fire1);
 
         StartCoroutine(FireUpdate());
     }
@@ -66,7 +67,7 @@ public class FireManager : MonoBehaviour
 
         foreach (var index in indices)
         {
-            _burnableObjects[index].CatchFire(fireStarter.Fire, GetMaterialByType(fireStarter.Fire));
+            _burnableObjects[index].CatchFire(fireStarter.Fire, GetMaterialByType(fireStarter.Fire), _fire1);
         }
     }
 
