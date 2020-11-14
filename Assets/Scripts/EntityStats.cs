@@ -2,7 +2,7 @@
 
 public class EntityStats : MonoBehaviour
 {
-    public int Life { get; set; } = 60;
+    [SerializeField] int _life;
     public Enums.Fire Fire { get; set; } = Enums.Fire.na;
     public int TimeOnFire { get; set; }
     Renderer _renderer;
@@ -10,10 +10,10 @@ public class EntityStats : MonoBehaviour
 
     public void Tick()
     {
-        Life -= (int)Fire;
+        _life -= (int)Fire;
         TimeOnFire++;
 
-        if (Life <= 0)
+        if (_life <= 0)
             Dead = true;
     }
 
