@@ -1,3 +1,4 @@
+<<<<<<< HEAD:Assets/Effects/Fire2.vfx.meta
 fileFormatVersion: 2
 guid: f84381f484f525347b03b53e491dd5ac
 VisualEffectImporter:
@@ -5,3 +6,12 @@ VisualEffectImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+=======
+fileFormatVersion: 2
+guid: 6952bb3b42e083e4bb41a64cd34ce4dd
+VisualEffectImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+>>>>>>> master:Library/PackageCache/com.unity.visualeffectgraph@8.2.0/Editor/Templates/Default Subgraph Block.vfxblock.meta
