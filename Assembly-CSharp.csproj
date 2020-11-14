@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{87727662-2449-9CD0-D390-C3DDFAF8BF43}</ProjectGuid>
+    <ProjectGuid>{A5A55C83-9B43-03C3-4909-8CDBAEB96963}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -56,17 +56,20 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Enums.cs" />
     <Compile Include="Assets\Scripts\PlayerInput.cs" />
+    <Compile Include="Assets\Scripts\BurnStatus.cs" />
     <Compile Include="Assets\Scripts\PlayerFollow.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\EntityStats.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\Scripts\Constants.cs" />
+    <Compile Include="Assets\Scripts\FireManager.cs" />
     <Compile Include="Assets\Scripts\PlayerTracker.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement3D.cs" />
-    <Compile Include="Assets\Scripts\FireManager.cs" />
-    <Compile Include="Assets\Scripts\BurnStatus.cs" />
-    <Compile Include="Assets\Scripts\Enums.cs" />
-    <Compile Include="Assets\Scripts\Constants.cs" />
-    <Compile Include="Assets\Scripts\EntityStats.cs" />
+    <Compile Include="Assets\PerlinGenerationScript00.cs" />
+    <Compile Include="Assets\PerlinMoveScript00.cs" />
+    <Compile Include="Assets\PerlinCubeGenerationScript00.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
