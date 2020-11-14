@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.AI;
 
 public class EntityStats : MonoBehaviour
 {
@@ -14,7 +15,12 @@ public class EntityStats : MonoBehaviour
         TimeOnFire++;
 
         if (_life <= 0)
+        {
             Dead = true;
+
+            var obsticle = GetComponent<NavMeshObstacle>();
+            obsticle.carving = true;
+        }
     }
 
     public void DestroyMe()
@@ -22,10 +28,18 @@ public class EntityStats : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void CatchFire(Enums.Fire fire, Material material)
+    public void CatchFire(Enums.Fire fire, Material material, GameObject fireEffect)
     {
         _renderer = GetComponent<Renderer>();
         _renderer.material = material;
         Fire = fire;
+
+        var obstacle = gameObject.AddComponent(typeof(NavMeshObstacle)) as NavMeshObstacle;
+        obstacle.carving = true;
+
+        transform.position = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
+
+        var effect = GameObject.Instantiate(fireEffect, new Vector3(transform.position.x, transform.position.y + 0.4f, transform.position.z), Quaternion.identity);
+        effect.transform.parent = transform;
     }
 }

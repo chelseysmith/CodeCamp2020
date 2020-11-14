@@ -9,6 +9,7 @@ public class FireManager : MonoBehaviour
     [SerializeField] Material fire2;
     [SerializeField] Material fire3;
     [SerializeField] GameObject _prefab;
+    [SerializeField] GameObject _fire1;
 
     List<EntityStats> _burnableObjects = new List<EntityStats>();
 
@@ -21,7 +22,7 @@ public class FireManager : MonoBehaviour
     void Start()
     {
         GenerateCubes();
-        StartCoroutine(BuildNavMesh());
+        Surface.BuildNavMesh();
 
         var objects = GameObject.FindGameObjectsWithTag("Burnable");
         foreach (var obj in objects)
@@ -29,9 +30,9 @@ public class FireManager : MonoBehaviour
             _burnableObjects.Add(obj.GetComponent<EntityStats>());
         }
 
-        _burnableObjects[236].CatchFire(Enums.Fire.level1, fire1);
-        _burnableObjects[476].CatchFire(Enums.Fire.level2, fire2);
-        _burnableObjects[789].CatchFire(Enums.Fire.level3, fire3);
+        _burnableObjects[236].CatchFire(Enums.Fire.level1, fire1, _fire1);
+        _burnableObjects[476].CatchFire(Enums.Fire.level2, fire2, _fire1);
+        _burnableObjects[789].CatchFire(Enums.Fire.level3, fire3, _fire1);
 
         StartCoroutine(FireUpdate());
     }
@@ -51,31 +52,19 @@ public class FireManager : MonoBehaviour
                     
                     if(_burnableObjects[i].Dead)
                     {
-                        //objectsDestroyed = true;
+                        //bjectsDestroyed = true;
                         AttemptSpread(_burnableObjects[i]);
 
                         _burnableObjects[i].DestroyMe();
                         _burnableObjects.RemoveAt(i);
                         i--;
-
-                        //yield return null;
                     }
                 }
             }
 
-            //yield return null;
-
             //if (objectsDestroyed)
             //    StartCoroutine(BuildNavMesh());
         }
-    }
-
-    IEnumerator BuildNavMesh()
-    {
-        Surface.BuildNavMesh();
-        //UnityEditor.AI.NavMeshBuilder.BuildNavMesh();
-
-        yield return null;
     }
 
     private void GenerateCubes()
@@ -109,7 +98,7 @@ public class FireManager : MonoBehaviour
         var indices = new List<int>();
         for (int i = 0; i < _burnableObjects.Count; i++)
         {
-            if (!_burnableObjects[i].Dead)
+            if (!_burnableObjects[i].Dead && _burnableObjects[i].Fire == Enums.Fire.na)
             {
                 if (Vector3.Distance(fireStarter.transform.position, _burnableObjects[i].transform.position) < 1.5f)
                 {
@@ -120,7 +109,7 @@ public class FireManager : MonoBehaviour
 
         foreach (var index in indices)
         {
-            _burnableObjects[index].CatchFire(fireStarter.Fire, GetMaterialByType(fireStarter.Fire));
+            _burnableObjects[index].CatchFire(fireStarter.Fire, GetMaterialByType(fireStarter.Fire), _fire1);
         }
     }
 

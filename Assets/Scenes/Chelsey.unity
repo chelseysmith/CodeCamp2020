@@ -460,9 +460,10 @@ MonoBehaviour:
   fire2: {fileID: 2100000, guid: 4248342de97673148b3431920fb5d039, type: 2}
   fire3: {fileID: 2100000, guid: 686b22f9d8c6d2244afa48b813e4c112, type: 2}
   _prefab: {fileID: 5770537143741138312, guid: c212354cb032f7348a238658485798c4, type: 3}
+  _fire1: {fileID: 3810930040690761737, guid: 32f7434a711bc4c46a3dcf533bebe26b, type: 3}
   PerlinNoise: 0
-  Refinement: 0.1
-  Multiplier: 1.5
+  Refinement: 0
+  Multiplier: 0
   Cubes: 50
   Surface: {fileID: 879380093}
 --- !u!1 &1808471325
