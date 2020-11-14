@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
+- path: Assets/Scenes/Collin.unity
+=======
 - path: Assets/Scenes/Level1.unity
+>>>>>>> 870acb807b505fa1b088cfeb2289495f884da830
   isLoaded: 1
   isActive: 1
   isSubScene: 0
