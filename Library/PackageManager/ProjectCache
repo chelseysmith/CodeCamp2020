@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637409102896510674
-    m_Hash: 778587173
+      ticks: 637409113058275063
+    m_Hash: 3396967880
   m_LockFileStatus:
     m_FilePath: C:/Users/csmith/source/Unity/Firebreak CodeCamp2020/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637409102897109046
-    m_Hash: 3760620852
+      ticks: 637409113058295010
+    m_Hash: 2180813197
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
