@@ -123,6 +123,101 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &50606825
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 50606826}
+  - component: {fileID: 50606829}
+  - component: {fileID: 50606828}
+  - component: {fileID: 50606827}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &50606826
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50606825}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.85, z: 6.5}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_Children: []
+  m_Father: {fileID: 1005943171}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &50606827
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50606825}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &50606828
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50606825}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &50606829
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50606825}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &147900528
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,190 +789,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c9758328630c9045b6858b32e246880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _leftStick:
-    m_Name: Left Stick
-    m_Type: 2
-    m_ExpectedControlType: Vector2
-    m_Id: 7014ec54-db74-407d-9a5d-0fa70eddd068
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 2D Vector
-      m_Id: 08b52c1a-3cf0-4f15-9f72-1076a3da34c2
-      m_Path: 2DVector
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Left Stick
-      m_Flags: 4
-    - m_Name: up
-      m_Id: 8b5df72c-1329-47c3-a99f-1c92161f1826
-      m_Path: <Gamepad>/leftStick/up
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Left Stick
-      m_Flags: 8
-    - m_Name: down
-      m_Id: 04f44c2f-7ff1-4c4d-8020-a9389b769c50
-      m_Path: <Gamepad>/leftStick/down
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Left Stick
-      m_Flags: 8
-    - m_Name: left
-      m_Id: be9dd582-1ea4-40a3-9401-faf9fc4ef242
-      m_Path: <Gamepad>/leftStick/left
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Left Stick
-      m_Flags: 8
-    - m_Name: right
-      m_Id: 989d0037-13eb-4114-943a-162f021e67b7
-      m_Path: <Gamepad>/leftStick/right
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Left Stick
-      m_Flags: 8
-  _rightStick:
-    m_Name: Right Stick
-    m_Type: 2
-    m_ExpectedControlType: Vector2
-    m_Id: 5fee385b-8590-4ecd-849f-6eeb7546bafc
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 2D Vector
-      m_Id: 5c8b630c-34e2-4b2f-8a06-fbd7a3410e09
-      m_Path: 2DVector
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Right Stick
-      m_Flags: 4
-    - m_Name: up
-      m_Id: 552f47d7-914c-44dc-bf42-d32aae0499c7
-      m_Path: <Gamepad>/rightStick/up
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Right Stick
-      m_Flags: 8
-    - m_Name: down
-      m_Id: 9dce350d-bd7e-4182-bce7-8420fb363778
-      m_Path: <Gamepad>/rightStick/down
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Right Stick
-      m_Flags: 8
-    - m_Name: left
-      m_Id: 4ce5180a-c37f-49ae-a489-d0e7cac6583c
-      m_Path: <Gamepad>/rightStick/left
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Right Stick
-      m_Flags: 8
-    - m_Name: right
-      m_Id: 55c29a92-cc9e-43b9-89bb-4822d072b13e
-      m_Path: <Gamepad>/rightStick/right
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Right Stick
-      m_Flags: 8
-  _buttons:
-    m_Name: Buttons
-    m_Type: 1
-    m_ExpectedControlType: Button
-    m_Id: f2cee4f0-ee89-4fc7-8c60-66a205716af7
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: f63014f6-9e24-45c0-b079-e7f3edca9b0d
-      m_Path: <Gamepad>/buttonSouth
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Buttons
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 75245b92-f8f6-401b-999c-7a1b46b067e6
-      m_Path: <Gamepad>/buttonEast
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Buttons
-      m_Flags: 0
-    - m_Name: 
-      m_Id: fc368945-4cc3-49a2-8722-227b58896675
-      m_Path: <Gamepad>/buttonWest
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Buttons
-      m_Flags: 0
-    - m_Name: 
-      m_Id: ee9dcbc0-c8dc-4748-9564-3ce7d9e13df1
-      m_Path: <Gamepad>/buttonNorth
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Buttons
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 10cd16e5-6058-47fa-9f1b-6dfc24f79f02
-      m_Path: <Gamepad>/select
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Buttons
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 52d0a89e-06b5-4b1d-aaa2-1d3ba27d0b4f
-      m_Path: <Gamepad>/start
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Buttons
-      m_Flags: 0
-    - m_Name: 
-      m_Id: cbb59c28-72a0-477e-a888-43db0e0a950c
-      m_Path: <Gamepad>/leftShoulder
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Buttons
-      m_Flags: 0
-    - m_Name: 
-      m_Id: bbfc8820-1f98-4c12-89df-d17b3c40ebef
-      m_Path: <Gamepad>/rightShoulder
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Buttons
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 3a2ffbcd-2640-4c97-8283-936ba649f276
-      m_Path: <Gamepad>/leftTrigger
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Buttons
-      m_Flags: 0
-    - m_Name: 
-      m_Id: d6713ef5-5208-4e3d-9c8f-0904edcd4662
-      m_Path: <Gamepad>/rightTrigger
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Buttons
-      m_Flags: 0
   _playerSpeed: 4
   _rotationSpeed: 0
 --- !u!4 &1005943171
@@ -892,6 +803,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 678557494}
+  - {fileID: 50606826}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1102,16 +1014,16 @@ Camera:
   m_FOVAxisMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 18
+  m_FocalLength: 32.96973
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 67.380135
+  near clip plane: 0.1
+  far clip plane: 5000
+  field of view: 40
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1136,8 +1048,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1503250534}
-  m_LocalRotation: {x: -0.25975832, y: -0.016243726, z: 0.0043613445, w: -0.9655272}
-  m_LocalPosition: {x: -0.3585215, y: 6.139572, z: -4.3719215}
+  m_LocalRotation: {x: 0.01596612, y: 0.000000034475516, z: -5.505103e-10, w: 0.99987257}
+  m_LocalPosition: {x: 0, y: 2.5, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
