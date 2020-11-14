@@ -1,56 +1,31 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EntityStats : MonoBehaviour
 {
-    public int Life { get; set; }
+    public int Life { get; set; } = 60;
     public Enums.Fire Fire { get; set; } = Enums.Fire.na;
-    float TimeOnFire = 0;
-    float FireStartTime;
+    public int TimeOnFire { get; set; }
+    Renderer _renderer;
+    public bool Dead { get; set; }
 
-    [SerializeField] Material fire1;
-    [SerializeField] Material fire2;
-    [SerializeField] Material fire3;
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
+    public void Tick()
     {
         Life -= (int)Fire;
+        TimeOnFire++;
 
-        if(Life <= 0)
-        {
-            Destroy(gameObject);
-        }
-
-        if(Fire != Enums.Fire.na)
-        {
-            TimeOnFire = Time.time - FireStartTime;
-        }
+        if (Life <= 0)
+            Dead = true;
     }
 
-    public void CatchFire(Enums.Fire fire)
+    public void DestroyMe()
     {
-        FireStartTime = Time.time;
+        Destroy(gameObject);
+    }
+
+    public void CatchFire(Enums.Fire fire, Material material)
+    {
+        _renderer = GetComponent<Renderer>();
+        _renderer.material = material;
         Fire = fire;
-
-        switch(Fire)
-        {
-            case Enums.Fire.level1:
-
-                break;
-
-            case Enums.Fire.level2:
-
-                break;
-
-            case Enums.Fire.level3:
-
-                break;
-        }
     }
 }
