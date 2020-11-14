@@ -58,27 +58,27 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Enums.cs" />
     <Compile Include="Assets\Scripts\PlayerInput.cs" />
+    <Compile Include="Assets\NavMeshComponents\_cripts\NavMeshSurface.cs" />
     <Compile Include="Assets\Scripts\BurnStatus.cs" />
-    <Compile Include="Assets\PerlinGenerationScript00.cs" />
+    <Compile Include="Assets\Scripts\PerlinGenerationScript00.cs" />
+    <Compile Include="Assets\NavMeshComponents\_ditor\NavMeshModifierVolumeEditor.cs" />
     <Compile Include="Assets\Scripts\PlayerFollow.cs" />
+    <Compile Include="Assets\NavMeshComponents\_ditor\NavMeshComponentsGUIUtility.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\EntityStats.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\NavMeshComponents\_cripts\NavMeshModifier.cs" />
     <Compile Include="Assets\Scripts\Constants.cs" />
-    <Compile Include="Assets\PerlinMoveScript00.cs" />
+    <Compile Include="Assets\NavMeshComponents\_cripts\NavMeshModifierVolume.cs" />
+    <Compile Include="Assets\Scripts\PerlinMoveScript00.cs" />
     <Compile Include="Assets\Scripts\FireManager.cs" />
     <Compile Include="Assets\Scripts\PlayerTracker.cs" />
-    <Compile Include="Assets\PerlinCubeGenerationScript00.cs" />
-    <Compile Include="Assets\Scripts\PlayerMovement3D.cs" />
-    <Compile Include="Assets\NavMeshComponents\_cripts\NavMeshSurface.cs" />
-    <Compile Include="Assets\NavMeshComponents\_ditor\NavMeshModifierVolumeEditor.cs" />
-    <Compile Include="Assets\NavMeshComponents\_ditor\NavMeshComponentsGUIUtility.cs" />
-    <Compile Include="Assets\NavMeshComponents\_cripts\NavMeshModifier.cs" />
-    <Compile Include="Assets\NavMeshComponents\_cripts\NavMeshModifierVolume.cs" />
     <Compile Include="Assets\NavMeshComponents\_cripts\NavMeshLink.cs" />
     <Compile Include="Assets\NavMeshComponents\_ditor\NavMeshSurfaceEditor.cs" />
     <Compile Include="Assets\NavMeshComponents\_ditor\NavMeshModifierEditor.cs" />
+    <Compile Include="Assets\Scripts\PerlinCubeGenerationScript00.cs" />
     <Compile Include="Assets\NavMeshComponents\_ditor\NavMeshLinkEditor.cs" />
+    <Compile Include="Assets\Scripts\PlayerMovement3D.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

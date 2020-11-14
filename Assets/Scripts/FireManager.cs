@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.AI;
 using UnityEngine;
 
 public class FireManager : MonoBehaviour
@@ -7,20 +8,30 @@ public class FireManager : MonoBehaviour
     [SerializeField] Material fire1;
     [SerializeField] Material fire2;
     [SerializeField] Material fire3;
+    [SerializeField] GameObject _prefab;
 
     List<EntityStats> _burnableObjects = new List<EntityStats>();
 
+    public float PerlinNoise = 0f;
+    public float Refinement = 0f;
+    public float Multiplier = 0f;
+    public int Cubes = 0;
+    public NavMeshSurface Surface;
+
     void Start()
     {
+        GenerateCubes();
+        StartCoroutine(BuildNavMesh());
+
         var objects = GameObject.FindGameObjectsWithTag("Burnable");
         foreach (var obj in objects)
         {
             _burnableObjects.Add(obj.GetComponent<EntityStats>());
         }
 
-        _burnableObjects[25].CatchFire(Enums.Fire.level1, fire1);
-        _burnableObjects[75].CatchFire(Enums.Fire.level2, fire2);
-        _burnableObjects[45].CatchFire(Enums.Fire.level3, fire3);
+        _burnableObjects[236].CatchFire(Enums.Fire.level1, fire1);
+        _burnableObjects[476].CatchFire(Enums.Fire.level2, fire2);
+        _burnableObjects[789].CatchFire(Enums.Fire.level3, fire3);
 
         StartCoroutine(FireUpdate());
     }
@@ -31,6 +42,7 @@ public class FireManager : MonoBehaviour
         {
             yield return new WaitForSeconds(1f);
 
+            //var objectsDestroyed = false;
             for (int i = 0; i < _burnableObjects.Count; i++)
             {
                 if (_burnableObjects[i].Fire != Enums.Fire.na)
@@ -39,15 +51,57 @@ public class FireManager : MonoBehaviour
                     
                     if(_burnableObjects[i].Dead)
                     {
+                        //objectsDestroyed = true;
                         AttemptSpread(_burnableObjects[i]);
 
                         _burnableObjects[i].DestroyMe();
                         _burnableObjects.RemoveAt(i);
-                        i--; 
+                        i--;
+
+                        //yield return null;
                     }
                 }
             }
+
+            //yield return null;
+
+            //if (objectsDestroyed)
+            //    StartCoroutine(BuildNavMesh());
         }
+    }
+
+    IEnumerator BuildNavMesh()
+    {
+        Surface.BuildNavMesh();
+        //UnityEditor.AI.NavMeshBuilder.BuildNavMesh();
+
+        yield return null;
+    }
+
+    private void GenerateCubes()
+    {
+        var minimum = float.MaxValue;
+
+        for (int i = 0; i < Cubes; i++)
+        {
+            for (int j = 0; j < Cubes; j++)
+            {
+                PerlinNoise = Mathf.PerlinNoise(i * Refinement, j * Refinement);
+                //var gameObject0 = GameObject.CreatePrimitive(PrimitiveType.Cube);
+
+                var gameObject = GameObject.Instantiate(_prefab, new Vector3(i, PerlinNoise * Multiplier, j), Quaternion.identity);
+                gameObject.transform.parent = transform;
+
+                //gameObject0.transform.position = new Vector3(i, PerlinNoise * Multiplier, j);
+
+                if (minimum > PerlinNoise * Multiplier)
+                    minimum = PerlinNoise * Multiplier;
+            }
+        }
+
+        var plane = GameObject.CreatePrimitive(PrimitiveType.Plane);
+        plane.transform.localScale = new Vector3(Mathf.Sqrt(Cubes) + 1, 1, Mathf.Sqrt(Cubes) + 1);
+        plane.transform.position = new Vector3(Cubes / 2, minimum - 0.25f, Cubes / 2);
     }
 
     void AttemptSpread(EntityStats fireStarter)

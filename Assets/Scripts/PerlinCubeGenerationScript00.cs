@@ -9,7 +9,7 @@ public class PerlinCubeGenerationScript00 : MonoBehaviour
     public float Multiplier = 0f;
     public int Cubes = 0;
     public NavMeshSurface Surface;
-
+   
     void Start()
     {
         GenerateCubes();
